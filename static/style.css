@@ -13,22 +13,22 @@ html, body{
   bottom: 0;
   background: #021124;
   overflow-y: auto;
-  width: 300px;
+  width: 25vw;
   transition: all ease-in-out 0.5s;
   padding: 0 15px;
   z-index: 9997;
 }
 
 #header .profile img {
-  margin: 15px auto;
+  margin: 10px auto;
   display: block;
-  width: 120px;
+  width: 85px;
   border: 8px solid #2c2f3f;
   border-radius: 50%;
 }
 
 #header .profile h1 {
-  font-size: 24px;
+  font-size: 1.3rem;
   margin: 0;
   padding: 0;
   font-weight: 600;
@@ -37,7 +37,7 @@ html, body{
 }
 
 #header .profile .social-links a {
-  font-size: 1rem;
+  font-size: 0.9rem;
   background:  #212431;
   color: #fff;
   padding: 0.6rem;
@@ -52,7 +52,7 @@ html, body{
 }
 
 .nav-menu {
-  padding: 1.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
 .nav-menu a,
@@ -61,13 +61,13 @@ html, body{
   align-items: center;
   color: #a8a9b4;
   transition: 0.3s;
-  font-size: 15px;
+  font-size: 1.3rem;
 }
 
 .nav-menu a,
 .nav-menu a:focus i {
-  font-size: 24px;
-  padding-right: 0.8rem;
+  font-size: 1rem;
+  padding-right: 0.3rem;
   color: #6f7180;
 }
 
@@ -87,7 +87,7 @@ html, body{
 }
 
 #main {
-  margin-left: 300px;
+  margin-left: 25vw;
 }
 
 section#inicio {
@@ -101,12 +101,13 @@ section#inicio {
 }
 
 section#inicio h2 {
-  font-size: 6rem;
+  font-size: 2.3rem;
 }
 
 section#inicio span#subtitle {
-  margin-right: 8rem;
-  font-size: 1.5rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+
 }
 
 .text-shadow {
@@ -119,4 +120,43 @@ section#inicio div#arraste {
 section#inicio div#arraste a {
   text-decoration: none;
   color: #fff;
+}
+
+i.menu-mobile {
+  position: fixed;
+  color: #fff;
+  background-color: #252c90;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  border-radius: 4rem;
+  cursor: pointer;
+  z-index: 10;
+  width: 45px;
+  height: 45px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-nav-active {
+  overflow: hidden;
+}
+
+.menu-nav-active #header {
+  left: 0;
+}
+@media (max-width: 790px) {
+  #header {
+    width: 300px;
+    left: -300px;
+  }
+
+  i.menu-mobile {
+    display: flex;
+  }
+  
+  #main {
+    margin-left: 0;
+  }
 }
