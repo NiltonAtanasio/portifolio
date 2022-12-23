@@ -44,8 +44,9 @@ def send():
         sender=os.getenv("EMAIL"),
         recipients=[os.getenv("EMAIL_2")],
         body=f'''     
-      {formContato.nome} com o e-mail {formContato.email}, te enviou a seguinte 
-      mensagem:    
+      {formContato.nome} com o e-mail {formContato.email}, te 
+      enviou a seguinte 
+mensagem:    
       {formContato.mensagem}
       '''
     )
