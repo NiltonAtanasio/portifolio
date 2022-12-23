@@ -20,7 +20,6 @@ mail_settings = {
 app.config.update(mail_settings)
 mail = Mail(app)
 
-
 class Contato:
   def __init__(self, nome, email, mensagem):
     self.nome = nome
